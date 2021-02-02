@@ -10,6 +10,7 @@ namespace EmployeeManagementManagerLayer.Interface
         object AddEmployee(Employee employee);
         bool UpdateEmployee(Employee employee);
         bool DeleteEmployee(int id);
+       object GetEmployee(int id);
         IEnumerable<Employee> DisplayAllEmployees();
     }
 }

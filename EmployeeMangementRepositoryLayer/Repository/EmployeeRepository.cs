@@ -84,6 +84,22 @@ namespace EmployeeMangementRepositoryLayer.Repository
             throw new NotImplementedException();
         }
 
+        public object GetEmployee(int id)
+        {
+            var commandText = Queries.getSpecifiedEmployeeQuery;
+            using (var _db=new OracleConnection(configuration.GetConnectionString("UserDbConnection")))
+            using (OracleCommand cmd = new OracleCommand(commandText, _db))
+            {
+                cmd.Connection = _db;
+                cmd.Parameters.Add("employeeid", id);
+                _db.Open();
+                var result = cmd.ExecuteNonQuery();
+                _db.Close();
+                return null ;
+                
+            }
+        }
+
         public bool UpdateEmployee(Employee employee)
         {
             try

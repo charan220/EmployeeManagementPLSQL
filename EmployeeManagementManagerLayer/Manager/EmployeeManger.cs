@@ -31,6 +31,11 @@ namespace EmployeeManagementManagerLayer.Manager
             return this.employeeRepository.DisplayAllEmployees();
         }
 
+        public object GetEmployee(int id)
+        {
+            return this.employeeRepository.GetEmployee(id);
+        }
+
         public bool UpdateEmployee(Employee employee)
         {
             return this.employeeRepository.UpdateEmployee(employee);
