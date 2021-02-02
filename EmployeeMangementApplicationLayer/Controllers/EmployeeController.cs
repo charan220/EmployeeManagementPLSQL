@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace EmployeeMangementApplicationLayer.Controllers
 {
     [Route("api/[controller]")]
+
+
     [ApiController]
     public class EmployeeController : ControllerBase
     {
